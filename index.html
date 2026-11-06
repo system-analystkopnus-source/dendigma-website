@@ -280,6 +280,9 @@ em{font-style:italic}
 @media (max-width:960px){.dl-card{grid-template-columns:150px 1fr;grid-template-rows:auto}.dl-book{width:118px}}
 @media (max-width:640px){.dl-card{grid-template-columns:96px minmax(0,1fr)}.dl-book{width:78px}.dl-btns{flex-wrap:wrap}}
 .nav .btn .wa-ic{width:18px;height:18px;fill:#25d366;flex:none;margin-right:-2px}
+/* custom select chevron */
+form .field select{-webkit-appearance:none;appearance:none;padding-right:44px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a571b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:16px 16px}
+.field select::-ms-expand{display:none}
 
 /* ---------- NAV ---------- */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(238,231,218,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
@@ -831,7 +834,7 @@ footer p{margin:0;font-size:13px;letter-spacing:.04em}
         <div class="field"><label for="f-brand">Brand</label><input id="f-brand" placeholder="Nama brand"></div>
       </div>
       <div class="row">
-        <div class="field"><label for="f-prod">Jenis box</label><select id="f-prod"><option>Belum tahu, butuh rekomendasi</option><option>Tuck In Box</option><option>Top Bottom Box</option><option>Slide Box</option><option>Mailer Box</option><option>Window Box</option><option>Carrier Box</option><option>Sleeve Paper</option><option>Paper Bag</option></select></div>
+        <div class="field"><label for="f-prod">Jenis box</label><select id="f-prod"><option>Butuh rekomendasi</option><option>Tuck In Box</option><option>Top Bottom Box</option><option>Slide Box</option><option>Mailer Box</option><option>Window Box</option><option>Carrier Box</option><option>Sleeve Paper</option><option>Paper Bag</option></select></div>
         <div class="field"><label for="f-qty">Perkiraan jumlah</label><input id="f-qty" inputmode="numeric" placeholder="mis. 1.000 pcs"></div>
       </div>
       <fieldset class="checks">
