@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="PT Dendigma Jaya Indonesia: custom box packaging, gift box, tumbler, plakban, dan sticker seal untuk skincare, food, fashion, dan corporate gift di Jakarta."><style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>PT Dendigma Jaya Indonesia | Custom Packaging &amp; Gift</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="img/i02.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: a light pearl atelier for skincare packaging — generous white space, CSS 3D boxes as the hero objects, espresso bands for contrast. Single deliberate light theme. */
+:root{
+  --pearl:#eee7da; --sand:#e4d9c6; --card:#f8f3ea;
+  --ink:#1e1912; --muted:#544939; --line:rgba(90,68,36,.2); --line-strong:rgba(100,74,34,.42);
+  --gold:#8a6420; --gold-hi:#e9d48a; --gold-lo:#7a571b;
+  --espresso:#2a241e; --espresso-2:#3a332b; --on-dark:#f7f1e5; --on-dark-muted:#cdc2ae;
+  --navy:#2a3768; --navy-2:#223060; --navy-3:#1c2852;
+  --blush:#ead8cc;
+  --foil:linear-gradient(100deg,#a87d33 0%,#d4af5c 32%,#f1e29a 52%,#d4af5c 70%,#ad8136 100%);
+  --f-display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-body:"Jost","Futura","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --wrap:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--pearl);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--pearl)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+@media (max-width:560px){.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.4vw,52px);line-height:1.1}
+em{font-style:italic}
+.foil{background:var(--foil);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.gold-ink{color:var(--gold)}
+.lead{color:var(--muted);font-size:18px;max-width:58ch;margin:0;font-weight:400}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font-family:var(--f-body);font-weight:500;font-size:14px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:40px;border:1px solid transparent;cursor:pointer;transition:all .25s}
+.btn-dark{background:var(--espresso);color:var(--on-dark)}
+.btn-dark:hover{background:var(--gold-lo)}
+.btn-line{border-color:var(--line-strong);color:var(--ink);background:transparent}
+.btn-line:hover{border-color:var(--gold);color:var(--gold-lo)}
+.btn-gold{background:var(--foil);background-size:200% 100%;color:#2a1f0c}
+.btn-gold:hover{background-position:100% 0}
+
+/* ---------- generic CSS cuboid ---------- */
+.scene{perspective:1300px;display:grid;place-items:center;position:relative}
+.rig{position:relative;transform-style:preserve-3d;width:0;height:0}
+.cub{position:absolute;left:0;top:0;transform-style:preserve-3d}
+.cub .fc{position:absolute;left:0;top:0;backface-visibility:hidden}
+.cub .ft{width:var(--w);height:var(--h);transform:translate(-50%,-50%) translateZ(calc(var(--d)/2))}
+.cub .bk{width:var(--w);height:var(--h);transform:translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--d)/2))}
+.cub .rt{width:var(--d);height:var(--h);transform:translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--w)/2))}
+.cub .lf{width:var(--d);height:var(--h);transform:translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--w)/2))}
+.cub .tp{width:var(--w);height:var(--d);transform:translate(-50%,-50%) rotateX(90deg) translateZ(calc(var(--h)/2))}
+.cub .bt{width:var(--w);height:var(--d);transform:translate(-50%,-50%) rotateX(-90deg) translateZ(calc(var(--h)/2))}
+.shadow{position:absolute;left:50%;width:70%;height:40px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(60,40,15,.28),transparent);filter:blur(4px);pointer-events:none}
+
+/* navy rigid box skin */
+.navy .fc{background:linear-gradient(180deg,var(--navy),var(--navy-2));box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+.navy .rt,.navy .bk{background:linear-gradient(180deg,var(--navy-2),var(--navy-3))}
+.navy .tp{background:radial-gradient(120% 120% at 30% 20%,#34427a,var(--navy) 60%)}
+
+/* ---------- BOX PACKAGING ---------- */
+.pick-inline{font-weight:500;color:var(--gold-lo)}
+.boxes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bx{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 24px 26px;display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.bx:hover{box-shadow:0 30px 50px -28px rgba(60,40,10,.45)}
+.bx.is-pick{border-color:var(--line-strong);background:linear-gradient(180deg,#fbf6ec,var(--card))}
+.bx svg{width:52px;height:44px;stroke:var(--gold);fill:none;stroke-width:1.3;margin-bottom:6px}
+.bx h3{font-size:24px;line-height:1.15}
+.bx p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.bx dl{margin:auto 0 0;padding-top:14px;border-top:1px solid var(--line);display:grid;gap:2px}
+.bx dt{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.bx dd{margin:0 0 8px;font-size:14px;color:var(--ink)}
+.bx dd:last-child{margin-bottom:0}
+.pick{position:absolute;top:18px;right:18px;padding:5px 11px;border-radius:30px;background:var(--foil);color:#2a1f0c;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+@media (max-width:1040px){.boxes{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.boxes{grid-template-columns:1fr}}
+
+/* ---------- PROFILE ---------- */
+.profile{background:var(--sand)}
+.about{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start}
+.about > *{min-width:0}
+.about-text h3{font-size:clamp(26px,2.6vw,34px);margin-bottom:16px}
+.about-text p{color:var(--muted);margin:0 0 16px;max-width:62ch}
+.values{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.values li{background:var(--pearl);padding:16px 16px;font-size:13.5px;color:var(--muted);line-height:1.45}
+.values b{display:block;font-family:var(--f-display);font-weight:400;font-size:18px;color:var(--ink);margin-bottom:2px}
+.dl-card{background:var(--espresso);color:var(--on-dark);border-radius:22px;padding:24px;display:grid;gap:22px}
+.dl-cover{border-radius:10px;overflow:hidden;box-shadow:0 24px 40px -20px rgba(0,0,0,.7);transition:transform .35s}
+.dl-cover img{display:block;width:100%;height:auto}
+.dl-meta{display:grid;gap:8px;justify-items:start}
+.dl-meta .eyebrow{color:var(--gold-hi)}
+.dl-meta h4{font-size:28px}
+.dl-meta p{margin:0;color:var(--on-dark-muted);font-size:14px}
+.dl-meta .btn{margin-top:8px}
+.dl-meta .btn-dark{background:var(--foil);color:#2a1f0c}
+.dl-meta .btn-line{color:var(--on-dark);border-color:rgba(233,212,138,.4)}
+.dl-status{min-height:1.4em}
+.sub-head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin:96px 0 30px;padding-top:28px;border-top:1px solid var(--line-strong)}
+.sub-head h3{font-size:clamp(28px,3vw,40px)}
+.profile .filters{margin:0;justify-content:flex-end}
+@media (max-width:960px){.about{grid-template-columns:1fr;gap:36px}.dl-card{grid-template-columns:200px 1fr;align-items:center}}
+@media (max-width:640px){.values{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.dl-card{grid-template-columns:1fr}.profile .filters{justify-content:flex-start}}
+
+/* org chart */
+.org-wrap{overflow-x:auto;padding-bottom:6px}
+.org{min-width:680px;display:grid;gap:44px;position:relative}
+.org-top{display:flex;justify-content:center;position:relative}
+.org-top::after{content:"";position:absolute;left:50%;top:100%;height:22px;width:1px;background:var(--line-strong)}
+.org-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.org-row::before{content:"";position:absolute;left:12.5%;right:12.5%;top:-22px;height:1px;background:var(--line-strong)}
+.org-row .node::before{content:"";position:absolute;left:50%;top:-22px;height:22px;width:1px;background:var(--line-strong)}
+.node{position:relative;background:var(--pearl);border:1px solid var(--line-strong);border-radius:14px;padding:18px 16px;text-align:center;display:grid;gap:4px;transform-style:preserve-3d;transition:transform .3s}
+.node:hover{transform:perspective(600px) rotateX(8deg) translateY(-3px)}
+.node .role{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.node .name{font-family:var(--f-display);font-size:20px}
+.lead-node{background:var(--espresso);border-color:var(--espresso);min-width:240px}
+.lead-node .role{color:var(--gold-hi)}
+.lead-node .name{color:var(--on-dark)}
+[hidden]{display:none!important}
+.shot.wide{grid-column:span 2;aspect-ratio:8/3.3}
+@media (max-width:520px){.shot.wide{grid-column:auto;aspect-ratio:4/3.3}}
+.hero h1 .foil{background-image:linear-gradient(100deg,#6f4c14 0%,#9c722a 32%,#c39b4c 52%,#9c722a 70%,#6f4c14 100%)}
+
+/* ---------- CUSTOM DESIGN ---------- */
+.custom{background:var(--espresso);color:var(--on-dark);overflow:hidden}
+.custom .eyebrow{color:var(--gold-hi)}
+.custom .lead{color:var(--on-dark-muted)}
+.custom-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.custom-grid > *{min-width:0}
+.custom h2{margin:16px 0 18px}
+.cgrid{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cgrid li{display:grid;grid-template-columns:40px 1fr;column-gap:12px;align-items:center;padding:14px 16px;border:1px solid rgba(233,212,138,.2);border-radius:14px;transition:border-color .25s,background .25s}
+.cgrid li:hover{border-color:rgba(233,212,138,.5);background:var(--espresso-2)}
+.cgrid svg{grid-row:span 2;width:38px;height:32px;stroke:var(--gold-hi);fill:none;stroke-width:1.3}
+.cgrid b{font-family:var(--f-display);font-weight:400;font-size:19px;line-height:1.2}
+.cgrid span{font-size:13px;color:var(--on-dark-muted);line-height:1.4}
+.custom-stage{height:500px;cursor:grab;touch-action:pan-y;user-select:none}
+.custom-stage:active{cursor:grabbing}
+.custom-stage .rig{transform:rotateX(-20deg) rotateY(var(--ry,-30deg))}
+.custom-stage .shadow{top:calc(50% + 120px);width:360px;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent)}
+.custom-stage .hint{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--on-dark-muted);white-space:nowrap}
+.giftbox .fc{background:linear-gradient(180deg,#efe3d4,#e2d2bf)}
+.giftbox .rt,.giftbox .bk{background:linear-gradient(180deg,#dccbb6,#cdb9a1)}
+.giftbox .foam{background:radial-gradient(60% 70% at 40% 40%,#33417a,#222d58);box-shadow:inset 0 0 0 9px #e6d8c6}
+.rib{position:absolute;left:50%;top:0;bottom:0;width:22px;transform:translateX(-50%);background:var(--foil)}
+.gtag{position:absolute;right:22px;bottom:14px;font-family:var(--f-display);font-size:15px;letter-spacing:.1em;color:var(--gold-lo)}
+.tface{position:absolute;left:0;top:0;backface-visibility:hidden}
+.tcap{position:absolute;left:0;top:0;border-radius:50%;background:radial-gradient(circle at 40% 35%,#4a4036,#221d18)}
+.tcard .fc{background:#f6efe2}
+.tcard .ft{display:grid;place-items:center;align-content:center;gap:4px;border:1px solid #d4af5c;box-shadow:inset 0 0 0 5px #f6efe2,inset 0 0 0 6px rgba(180,138,60,.6)}
+.tcard .ft span{font-family:var(--f-display);font-style:italic;font-size:18px;color:#2a241e}
+.tcard .ft small{font-size:9px;letter-spacing:.3em;color:var(--gold-lo)}
+@media (max-width:960px){.custom-grid{grid-template-columns:1fr;gap:10px}.custom-stage{order:-1;height:400px}.custom-stage .rig{scale:.8}}
+@media (max-width:480px){.cgrid{grid-template-columns:1fr}.custom-stage{height:330px}.custom-stage .rig{scale:.64}}
+
+/* phone with icon */
+.phone-row{gap:12px}
+.wa-num{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-body);font-size:19px;font-weight:500;letter-spacing:.02em;color:var(--on-dark);text-decoration:none;font-variant-numeric:lining-nums tabular-nums}
+.wa-num svg{width:22px;height:22px;flex:none;fill:#25d366}
+.wa-num:hover{color:var(--gold-hi)}
+
+/* ---------- MOBILE: drop what isn't needed ---------- */
+@media (max-width:640px){
+  .hero-meta,.hint,.hero-stage .shadow,.bx > p,.bx dl dt:nth-of-type(2),.bx dl dd:nth-of-type(2),
+  .ticks,.fin-note,.fin-btn small,.mat small,.mats-title,.mats,.cgrid span,
+  .values,.about-text p + p,.form-hint,form .hint,form .fine,footer p,.sec-head .lead,.step p,.seal .panel > p{display:none!important}
+  section.band{padding-block:60px}
+  .sec-head{margin-bottom:34px}
+  .hero .wrap{padding-block:32px 36px;gap:8px}
+  .hero-stage{height:300px}.hero-stage .rig{scale:.6}
+  .boxes{grid-template-columns:1fr 1fr;gap:10px}
+  .bx{padding:18px 14px}.bx h3{font-size:18px}.bx svg{width:36px;height:30px}
+  .pick{position:static;align-self:flex-start;order:-1;font-size:9px;padding:4px 8px}
+  .bx dd{font-size:12.5px}
+  .fin-list{grid-template-columns:1fr 1fr}.fin-btn{padding:12px}.fin-btn b{font-size:16px}
+  .cgrid li{padding:10px 12px}.cgrid b{font-size:16px}
+  .sub-head{margin-top:60px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:22px}
+  .step .n{width:44px;height:44px;font-size:18px}
+  .step h3{font-size:18px}
+  .dl-card{grid-template-columns:120px 1fr;gap:16px;padding:16px}
+  .dl-meta h4{font-size:22px}
+}
+.dl-list{font-size:13px!important;line-height:1.5}
+@media (max-width:640px){
+  #proses .steps{grid-template-columns:1fr 1fr;row-gap:14px;column-gap:12px}
+  #proses .step{grid-template-columns:44px 1fr;align-items:center;column-gap:12px}
+  #proses .step .n{margin:0}
+  .seal-stage,.custom-stage{height:280px}
+  .seal-stage .rig,.custom-stage .rig{scale:.6}
+  .custom-stage .shadow,.seal-stage .shadow{top:calc(50% + 50px);width:220px}
+}
+
+/* portfolio mockup tiles (illustrations until real photos are supplied) */
+.shot.mock figcaption span{color:var(--muted)}
+.art{position:absolute;inset:0;overflow:hidden}
+.art i,.art b{position:absolute;display:block}
+.art-tape{background:radial-gradient(90% 80% at 30% 20%,#f3ead9,#d9c8ad)}
+.art-tape .bxa,.art-tape .bxb{width:62%;height:44%;left:19%;top:8%;background:linear-gradient(160deg,#f7f1e6,#e6dac6);box-shadow:0 22px 30px -16px rgba(60,40,10,.55);transform:rotate(-9deg)}
+.art-tape .bxa{transform:rotate(-9deg) translate(-16%,26%);filter:brightness(.94)}
+.art-tape .bxb::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.12)}
+.art-tape .bxb b{left:50%;top:-6%;bottom:-6%;width:24%;transform:translateX(-50%);background:repeating-linear-gradient(0deg,#b48a3c 0 26px,#c9a253 26px 27px);writing-mode:vertical-rl;text-align:center;font-family:var(--f-display);font-size:13px;letter-spacing:.32em;color:#2a1f0c;overflow:hidden;white-space:nowrap;line-height:2.2}
+.art-seal{background:linear-gradient(180deg,#e9dfcf,#d8c9b1)}
+.art-seal .lid{left:12%;right:12%;top:8%;height:34%;background:radial-gradient(120% 120% at 30% 10%,#3a4882,#25305a);box-shadow:inset 0 -1px 0 rgba(255,255,255,.15)}
+.art-seal .side{left:12%;right:12%;top:42%;height:20%;background:linear-gradient(180deg,#1f2950,#18203f);box-shadow:0 26px 30px -18px rgba(0,0,0,.55)}
+.art-seal .sl{left:50%;top:42%;width:68px;height:68px;margin:-34px 0 0 -34px;border-radius:50%;background:var(--foil);display:grid;place-items:center;font-family:var(--f-display);font-size:18px;color:#2a1f0c;box-shadow:0 3px 8px rgba(0,0,0,.35)}
+.art-seal .s2{left:80%;top:18%;width:40px;height:40px;margin:-20px 0 0 -20px;font-size:11px;border-radius:6px;opacity:.9}
+.art-tum{background:radial-gradient(80% 90% at 50% 30%,#f2e2d8,#dcc3b4)}
+.tm{left:50%;top:7%;width:66px;height:58%;margin-left:-37px;border-radius:8px 8px 12px 12px;background:linear-gradient(90deg,#a98a55 0%,#e9d6a8 32%,#f6ecd0 42%,#c9a96a 70%,#8e7041 100%);box-shadow:0 18px 24px -14px rgba(60,40,10,.6)}
+.tm::before{content:"";position:absolute;left:-2px;right:-2px;top:-4px;height:20%;border-radius:8px 8px 3px 3px;background:linear-gradient(90deg,#2a241e,#5a4f43 40%,#2a241e)}
+.tm b{left:0;right:0;top:46%;height:16%;background:linear-gradient(90deg,#1c2550,#33417a 40%,#1c2550);display:grid;place-items:center;font-family:var(--f-display);font-size:13px;letter-spacing:.14em;color:var(--gold-hi)}
+.tsh{left:20%;right:20%;bottom:30%;height:16px;border-radius:50%;background:radial-gradient(closest-side,rgba(60,40,10,.35),transparent)}
+.art-set{background:linear-gradient(180deg,#ece2d2,#d7c6ab)}
+.art-set .gbx{left:10%;right:10%;bottom:32%;height:32%;background:linear-gradient(180deg,#2c3a6e,#1f2950);box-shadow:0 22px 28px -14px rgba(0,0,0,.5)}
+.art-set .gbx::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:16px;margin-left:-8px;background:var(--foil)}
+.art-set .t1{left:36%;top:5%;height:52%;width:54px;margin-left:-27px}
+.art-set .t2{left:64%;top:10%;height:47%;width:54px;margin-left:-27px;filter:saturate(.3) brightness(.55)}
+.art-set .tsh{bottom:28%}
+.dl-cover{max-width:240px;justify-self:center}
+.seal-need{margin-top:26px;padding-top:20px;border-top:1px solid rgba(233,212,138,.2)}
+.seal-need > div{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.seal-need > div span{padding:6px 14px;border:1px solid rgba(233,212,138,.35);border-radius:30px;font-size:13px;color:var(--on-dark)}
+.shot > img{position:absolute;inset:0;width:100%;height:100%}
+/* company profile booklet mockup */
+.dl-cover{display:none}
+.dl-stage{position:relative;perspective:1400px;display:grid;place-items:center;padding:18px 0 26px;background:radial-gradient(70% 60% at 50% 45%,rgba(233,212,138,.14),transparent 70%)}
+.dl-book{position:relative;width:min(230px,70%);aspect-ratio:210/297;transform:rotateY(-22deg) rotateX(6deg) rotateZ(-2deg);transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.dl-card:hover .dl-book{transform:rotateY(-8deg) rotateX(3deg) rotateZ(0)}
+.dl-book img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:3px 6px 6px 3px;display:block}
+.dl-book .pg2{transform:translate3d(30px,10px,-30px) rotateZ(5deg);filter:brightness(.82);box-shadow:0 20px 30px -14px rgba(0,0,0,.7)}
+.dl-book .pg-edge{position:absolute;top:3px;bottom:3px;right:-7px;width:8px;transform:translateZ(-4px);background:repeating-linear-gradient(90deg,#f1ebe0 0 1px,#d9d0c0 1px 2px);border-radius:0 3px 3px 0}
+.dl-book .pg1{box-shadow:0 34px 50px -18px rgba(0,0,0,.85),0 0 0 1px rgba(233,212,138,.25)}
+.dl-book .spine{position:absolute;left:0;top:0;bottom:0;width:14px;border-radius:3px 0 0 3px;background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(255,255,255,.08) 60%,transparent)}
+.dl-book .gloss{position:absolute;inset:0;border-radius:3px 6px 6px 3px;background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 70%,rgba(255,255,255,.06) 100%);pointer-events:none}
+.dl-shadow{position:absolute;left:50%;bottom:8px;width:62%;height:22px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.6),transparent)}
+@media (max-width:960px){.dl-card{grid-template-columns:200px 1fr}.dl-book{width:150px}}
+@media (max-width:520px){.dl-card{grid-template-columns:1fr}.dl-book{width:170px}}
+@media (max-width:640px){.dl-card{grid-template-columns:120px 1fr}.dl-book{width:100px}.dl-stage{padding:10px 0 16px}}
+.dl-card{background:radial-gradient(90% 50% at 50% 0%,rgba(233,212,138,.12),transparent 70%),var(--espresso);border:1px solid rgba(233,212,138,.28)}
+
+/* ---------- NAV ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(238,231,218,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:34px;width:auto;filter:brightness(.62) saturate(1.3)}
+.brand span{font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;line-height:1.25}
+.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.2em;font-weight:400}
+.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:14px;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--gold-lo)}
+.nav .btn{padding:10px 18px;font-size:12px}
+@media (max-width:980px){.nav ul{display:none}}
+@media (max-width:400px){.brand small{display:none}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(70% 80% at 78% 40%,#f7f1e6 0%,var(--pearl) 55%),var(--pearl)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-block:64px 72px}
+.hero-copy{min-width:0}
+.hero h1{font-size:clamp(42px,5.8vw,76px);line-height:1.04;margin:22px 0 24px}
+.hero h1 .foil{animation:sheen 2.6s .3s cubic-bezier(.4,0,.2,1) both}
+@keyframes sheen{from{background-position:100% 0}to{background-position:0 0}}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.hero-meta b{font-family:var(--f-display);font-weight:400;font-size:26px;color:var(--ink);margin-right:6px;font-variant-numeric:lining-nums}
+.hero-stage{height:480px;min-width:0;cursor:grab;touch-action:pan-y;user-select:none}
+.hero-stage:active{cursor:grabbing}
+.hero-stage .rig{transform:rotateX(-24deg) rotateY(var(--ry,-32deg))}
+.hero-stage .lid{transform:translate3d(0,var(--lidy,-96px),0);transition:transform .2s}
+.hero-stage .lid-float{animation:float 4.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+.hero-stage .shadow{top:calc(50% + 110px);width:300px}
+.hero-stage .hint{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.insert{background:#f3ece0!important;display:grid;grid-template-columns:repeat(3,1fr);place-items:center;padding:24px;box-shadow:inset 0 0 0 10px var(--navy-2),inset 0 0 0 11px rgba(0,0,0,.2)!important}
+.insert i{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff2c4,#d9b45c 45%,#8d6526 100%);box-shadow:0 0 0 7px #e2d8c6,0 0 0 8px rgba(0,0,0,.08)}
+.lid-top{display:grid;place-items:center}
+.lid-top span{font-family:var(--f-display);font-size:74px;letter-spacing:.02em;line-height:1;background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent;transform:rotate(0)}
+.lid-top small{position:absolute;bottom:26px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:.34em;color:rgba(241,226,154,.65);text-transform:uppercase}
+.band-ribbon{position:absolute;inset:0;pointer-events:none}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-block:44px 48px}.hero-stage{height:400px}.hero-stage .rig{scale:.84}}
+@media (max-width:420px){.hero-stage{height:340px}.hero-stage .rig{scale:.68}}
+
+/* ---------- SECTIONS ---------- */
+section.band{padding-block:110px}
+@media (max-width:700px){section.band{padding-block:76px}}
+.sec-head{max-width:720px;margin:0 auto 60px;text-align:center;display:grid;gap:16px;justify-items:center}
+.sec-head .lead{margin:0 auto}
+
+/* SKINCARE range */
+.range{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 30px;display:flex;flex-direction:column;gap:10px;min-width:0;transform-style:preserve-3d;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.rcard:hover{box-shadow:0 30px 50px -28px rgba(80,55,20,.35)}
+.rcard svg{width:56px;height:64px;stroke:var(--gold);fill:none;stroke-width:1.2;margin-bottom:8px;transform:translateZ(30px)}
+.rcard h3{font-size:25px;line-height:1.2}
+.rcard p{margin:0;color:var(--muted);font-size:15px}
+.rcard .rec{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:13px;letter-spacing:.06em;color:var(--ink)}
+.rcard .rec b{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:2px}
+@media (max-width:960px){.range{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.range{grid-template-columns:1fr}}
+
+/* MODELS */
+.models-band{background:var(--sand)}
+.models{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.model{background:var(--pearl);padding:28px 24px 30px;min-width:0;display:grid;gap:6px;align-content:start;transition:background .3s}
+.model:hover{background:var(--card)}
+.model svg{width:48px;height:40px;stroke:var(--gold);fill:none;stroke-width:1.2;margin-bottom:6px}
+.model h3{font-size:22px}
+.model p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.55}
+.also{text-align:center;margin:28px 0 0;color:var(--muted);font-size:15px}
+.also b{color:var(--ink);font-weight:500}
+@media (max-width:960px){.models{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.models{grid-template-columns:1fr}}
+
+/* SEAL & TAPE */
+.seal{background:var(--espresso);color:var(--on-dark);overflow:hidden}
+.seal .eyebrow{color:var(--gold-hi)}
+.seal .lead{color:var(--on-dark-muted)}
+.seal-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.seal-grid > *{min-width:0}
+.tabs{display:inline-flex;padding:5px;border:1px solid rgba(233,212,138,.3);border-radius:40px;gap:4px;margin:30px 0 26px}
+.tabs button{all:unset;cursor:pointer;padding:10px 22px;border-radius:40px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-muted);transition:all .25s}
+.tabs button[aria-selected="true"]{background:var(--foil);color:#2a1f0c}
+.tabs button:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px}
+.panel h3{font-size:clamp(28px,3vw,38px);margin-bottom:12px}
+.panel p{color:var(--on-dark-muted);margin:0 0 22px;max-width:52ch}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+.opt{border:1px solid rgba(233,212,138,.22);border-radius:14px;padding:16px 14px;display:grid;gap:10px;justify-items:start;min-width:0}
+.opt b{font-weight:500;font-size:15px}
+.opt small{color:var(--on-dark-muted);font-size:13px;line-height:1.45}
+.sw{height:34px;display:block}
+.sw.round{width:34px;border-radius:50%;background:var(--foil)}
+.sw.square{width:34px;border-radius:5px;background:var(--foil)}
+.sw.cut{width:44px;background:var(--foil);clip-path:polygon(50% 0,61% 30%,95% 35%,68% 57%,79% 92%,50% 72%,21% 92%,32% 57%,5% 35%,39% 30%)}
+.sw.plain{width:60px;height:22px;margin-block:6px;background:linear-gradient(180deg,#c9a868,#b89252);opacity:.9}
+.sw.logo{width:60px;height:22px;margin-block:6px;background:repeating-linear-gradient(90deg,#f1e29a 0 4px,#b48a3c 4px 22px)}
+.sw.custom{width:60px;height:22px;margin-block:6px;background:linear-gradient(90deg,#2a3768 0 40%,#ead8cc 40% 70%,#d4af5c 70%)}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:8px;color:var(--on-dark-muted);font-size:15px}
+.ticks li{display:flex;gap:10px}
+.ticks li::before{content:"";flex:none;width:6px;height:6px;margin-top:10px;border-radius:50%;background:var(--gold-hi)}
+.seal-stage{height:460px;cursor:grab;touch-action:pan-y;user-select:none}
+.seal-stage:active{cursor:grabbing}
+.seal-stage .rig{transform:rotateX(-26deg) rotateY(var(--ry,-38deg))}
+.seal-stage .shadow{top:calc(50% + 70px);width:340px;background:radial-gradient(closest-side,rgba(0,0,0,.5),transparent)}
+.mailer .fc{background:linear-gradient(180deg,#f6f1e8,#e7dfd1)}
+.mailer .rt,.mailer .bk{background:linear-gradient(180deg,#e5dccc,#d6ccb9)}
+.mailer .tp{background:#f3ede2}
+.mailer .tp::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.12)}
+.tape-top,.tape-front{position:absolute;left:50%;width:58px;transform:translateX(-50%);background:repeating-linear-gradient(0deg,#b48a3c 0 30px,#c9a253 30px 31px);display:flex;flex-direction:column;align-items:center;overflow:hidden;transition:opacity .4s}
+.tape-top{top:0;bottom:0}
+.tape-front{top:0;height:62%}
+.tape-top::after,.tape-front::after{content:"DJI  ·  DJI  ·  DJI  ·  DJI  ·  DJI";writing-mode:vertical-rl;font-family:var(--f-display);font-size:16px;letter-spacing:.3em;color:#2a1f0c;opacity:.75;white-space:nowrap;margin-top:8px}
+.tape-front{clip-path:polygon(0 0,100% 0,100% 92%,88% 100%,72% 93%,55% 100%,38% 93%,20% 100%,0 94%)}
+.seal-dot{position:absolute;left:50%;width:74px;height:74px;transform:translateX(-50%);border-radius:50%;background:var(--foil);display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.25);transition:opacity .4s, transform .4s}
+.seal-dot span{font-family:var(--f-display);font-size:19px;color:#2a1f0c}
+.seal-dot.on-top{bottom:-37px}
+.seal-dot.on-front{top:-37px}
+.seal-dot.on-top{clip-path:inset(0 0 50% 0)}
+.seal-dot.on-front{clip-path:inset(50% 0 0 0)}
+[data-mode="tape"] .seal-dot{opacity:0}
+[data-mode="seal"] .tape-top,[data-mode="seal"] .tape-front{opacity:0}
+[hidden].panel{display:none!important}
+@media (max-width:900px){.seal-grid{grid-template-columns:1fr;gap:20px}.seal-stage{height:380px;order:-1}.seal-stage .rig{scale:.82}}
+@media (max-width:520px){.opts{grid-template-columns:1fr 1fr 1fr;gap:8px}.opt{padding:12px 10px}.opt small{display:none}.seal-stage{height:320px}.seal-stage .rig{scale:.64}}
+
+/* FINISHING studio */
+.studio{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.fin-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fin-btn{all:unset;box-sizing:border-box;cursor:pointer;padding:18px 18px;border:1px solid var(--line);border-radius:14px;background:var(--card);transition:all .25s;display:grid;gap:2px}
+.fin-btn b{font-family:var(--f-display);font-weight:400;font-size:20px}
+.fin-btn small{color:var(--muted);font-size:13px;line-height:1.4}
+.fin-btn:hover{border-color:var(--line-strong)}
+.fin-btn[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset;background:#fbf6ec}
+.fin-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.fin-note{margin:22px 0 0;color:var(--muted);font-size:15px;min-height:3.3em}
+.fin-note b{color:var(--ink);font-weight:500}
+.fin-stage{height:440px;border-radius:24px;background:radial-gradient(80% 70% at 50% 35%,#f6efe3,var(--sand));border:1px solid var(--line)}
+.fin-stage .rig{transform:rotateX(var(--rx,-38deg)) rotateY(var(--ry,-28deg));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.fin-stage .shadow{top:calc(50% + 60px);width:300px}
+.fin-top{display:grid;place-items:center;overflow:hidden}
+.fin-top .mark{font-family:var(--f-display);font-size:78px;line-height:1;color:#33417a;transition:all .4s}
+.fin-top::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s}
+.fin-top[data-f="foil"] .mark{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 2.2s ease both}
+.fin-top[data-f="emboss"] .mark{color:#2e3b70;text-shadow:-1px -1px 0 rgba(255,255,255,.28),2px 3px 3px rgba(0,0,0,.5)}
+.fin-top[data-f="deboss"] .mark{color:#202b58;text-shadow:1px 1px 0 rgba(255,255,255,.2),-2px -2px 3px rgba(0,0,0,.55)}
+.fin-top[data-f="spotuv"]{background:#1f2448!important}
+.fin-top[data-f="spotuv"] .mark{background:linear-gradient(120deg,#2b3160 0%,#3b4272 40%,#c9cbe0 50%,#3b4272 60%,#2b3160 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 2.6s ease both}
+.fin-top[data-f="glossy"] .mark{color:#efe8d8}
+.fin-top[data-f="glossy"]::after{opacity:1;background:linear-gradient(125deg,rgba(255,255,255,.4) 0%,rgba(255,255,255,.06) 30%,transparent 45%,rgba(255,255,255,.14) 72%,transparent)}
+.fin-top[data-f="matte"] .mark{color:#d9d1bf;opacity:.88}
+.fin-top[data-f="matte"]::after{opacity:.6;background:repeating-radial-gradient(circle at 30% 30%,rgba(255,255,255,.03) 0 1px,transparent 1px 3px)}
+.mats{margin-top:72px;display:grid;grid-template-columns:repeat(5,1fr);gap:22px 18px}
+.mat{min-width:0;display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center}
+.chip{width:44px;height:56px;border-radius:4px;box-shadow:0 10px 18px -10px rgba(60,40,15,.4),inset 0 0 0 1px rgba(0,0,0,.06);transform:perspective(200px) rotateY(-14deg)}
+.mat b{display:block;font-weight:500;font-size:15px;line-height:1.25}
+.mat small{color:var(--muted);font-size:12.5px;line-height:1.35;display:block}
+.mats-title{margin-top:72px;text-align:center;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.mats-title + .mats{margin-top:28px}
+@media (max-width:960px){.studio{grid-template-columns:1fr}.fin-stage{order:-1;height:380px}.mats{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.mats{grid-template-columns:repeat(2,1fr)}.fin-stage .rig{scale:.8}}
+@media (max-width:380px){.fin-list{grid-template-columns:1fr}}
+
+/* PORTFOLIO */
+.work{background:var(--sand)}
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:36px}
+.filters button{all:unset;cursor:pointer;padding:9px 18px;border:1px solid var(--line-strong);border-radius:40px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:all .2s}
+.filters button:hover{color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--espresso);color:var(--on-dark);border-color:var(--espresso)}
+.filters button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;grid-auto-flow:dense;perspective:1400px}
+.shot{position:relative;margin:0;border-radius:14px;overflow:hidden;background:var(--card);aspect-ratio:4/3.3;min-width:0;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s;box-shadow:0 14px 30px -22px rgba(60,40,15,.5)}
+.shot.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot figcaption{position:absolute;left:12px;bottom:12px;right:12px;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:rgba(248,243,234,.94);backdrop-filter:blur(6px);font-size:14px;font-weight:500;transform:translateZ(40px)}
+.shot figcaption span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lo);flex:none}
+@media (max-width:960px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.gallery{grid-template-columns:1fr}.shot.big{grid-column:auto;grid-row:auto;aspect-ratio:4/3.3}}
+
+/* PROCESS + WHY */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;position:relative}
+.steps::before{content:"";position:absolute;left:28px;right:28px;top:28px;height:1px;background:var(--line-strong)}
+.step{position:relative;min-width:0;display:grid;gap:8px;justify-items:start}
+.step .n{width:56px;height:56px;border-radius:50%;background:var(--card);border:1px solid var(--line-strong);display:grid;place-items:center;font-family:var(--f-display);font-size:22px;color:var(--gold-lo);margin-bottom:10px;font-variant-numeric:lining-nums}
+.step h3{font-size:22px}
+.step p{margin:0;color:var(--muted);font-size:14.5px}
+@media (max-width:960px){.steps{grid-template-columns:repeat(2,1fr);row-gap:36px}.steps::before{display:none}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.why{margin-top:90px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.why div{background:var(--pearl);padding:26px 26px}
+.why h4{font-size:21px;margin-bottom:4px}
+.why p{margin:0;color:var(--muted);font-size:14.5px}
+@media (max-width:800px){.why{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.why{grid-template-columns:1fr}}
+
+/* CONTACT */
+.contact{background:var(--espresso);color:var(--on-dark)}
+.contact .eyebrow{color:var(--gold-hi)}
+.contact .lead{color:var(--on-dark-muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-grid > *{min-width:0}
+.contact h2{margin:18px 0 20px}
+.info{margin-top:40px;display:grid;gap:26px}
+.info .label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-hi);display:block;margin-bottom:6px}
+.info address{font-style:normal;font-size:17px;line-height:1.6}
+.phone-row{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
+.phone{font-family:var(--f-display);font-size:30px;font-variant-numeric:lining-nums;user-select:all}
+.copy{all:unset;cursor:pointer;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark-muted);border:1px solid rgba(233,212,138,.35);padding:7px 14px;border-radius:30px}
+.copy:hover{color:var(--gold-hi)}
+.copy:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px}
+form{background:var(--pearl);color:var(--ink);border-radius:22px;padding:36px;display:grid;gap:16px}
+form h3{font-size:28px}
+form .hint{margin:-6px 0 4px;color:var(--muted);font-size:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:grid;gap:6px;min-width:0}
+.field label,.checks legend{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{width:100%;background:var(--card);color:var(--ink);border:1px solid var(--line-strong);border-radius:10px;padding:12px 14px;font:inherit;font-size:16px}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(180,138,60,.16)}
+.checks{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.checks legend{margin-bottom:8px;padding:0}
+.checks label{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line-strong);border-radius:30px;font-size:14px;cursor:pointer}
+.checks input{accent-color:var(--gold-lo)}
+form .btn{width:100%}
+form .fine{margin:0;font-size:13px;color:var(--muted);text-align:center}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr;gap:44px}}
+@media (max-width:520px){form{padding:24px 18px}.row{grid-template-columns:1fr}.phone{font-size:26px}}
+
+footer{background:var(--espresso);color:var(--on-dark-muted);border-top:1px solid rgba(233,212,138,.15);padding-block:34px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .brand img{filter:none;height:44px}
+footer .brand span{color:var(--on-dark)}
+footer .brand small{color:var(--on-dark-muted)}
+footer p{margin:0;font-size:13px;letter-spacing:.04em}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--pearl);padding:10px 18px;font-size:14px;border-radius:30px;opacity:0;transition:all .3s;pointer-events:none;z-index:80}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+
+</head><body>
+<nav class="nav" aria-label="Utama">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/i03.png" alt="Logo DJ"><span>Dendigma Jaya<small>Indonesia</small></span></a>
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#box">Box Packaging</a></li>
+      <li><a href="#custom">Custom Design</a></li>
+      <li><a href="#seal">Plakban &amp; Seal</a></li>
+      <li><a href="#finishing">Finishing</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <a class="btn btn-dark" href="https://wa.me/6282111900788" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Custom Packaging &amp; Gift Specialist</span>
+      <h1>Kesan pertama yang <em class="foil">dikemas</em> sempurna.</h1>
+      <p class="lead">Box packaging custom untuk skincare, food, fashion, hingga corporate gift. Lengkap dengan gift box, tumbler, plakban bermerek, dan sticker seal, diproduksi langsung di workshop kami di Jakarta.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="#kontak">Minta penawaran</a>
+        <a class="btn btn-line" href="#box">Lihat pilihan box</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>8</b>model box</span>
+        <span><b>10</b>pilihan material</span>
+        <span><b>6</b>teknik finishing</span>
+      </div>
+    </div>
+    <div class="scene hero-stage" id="heroStage" aria-label="Ilustrasi 3D rigid box skincare. Geser untuk memutar.">
+      <div class="shadow"></div>
+      <div class="rig" id="heroRig">
+        <!-- base -->
+        <div class="cub navy" style="--w:250px;--h:120px;--d:250px;transform:translate3d(0,50px,0)">
+          <div class="fc ft"></div><div class="fc bk"></div><div class="fc rt"></div><div class="fc lf"></div>
+          <div class="fc tp insert"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="fc bt"></div>
+        </div>
+        <!-- lid -->
+        <div class="lid-float" style="transform-style:preserve-3d;position:absolute;left:0;top:0">
+          <div class="cub navy lid" style="--w:262px;--h:52px;--d:262px">
+            <div class="fc ft"></div><div class="fc bk"></div><div class="fc rt"></div><div class="fc lf"></div>
+            <div class="fc tp lid-top"><span>DJI</span><small>Dendigma Jaya Indonesia</small></div>
+            <div class="fc bt" style="background:#f3ece0"></div>
+          </div>
+        </div>
+      </div>
+      <span class="hint">Geser untuk memutar</span>
+    </div>
+  </div>
+</header>
+
+
+<section class="band" id="box">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Box packaging</span>
+      <h2>Pilih box yang tepat untuk <em>produk</em> Anda.</h2>
+      <p class="lead">Delapan model box dengan ukuran custom. Tanda <b class="pick-inline">Rekomendasi</b> menunjukkan model yang paling sering kami sarankan.</p>
+    </div>
+    <div class="boxes">
+      <article class="bx tilt is-pick"><span class="pick">Rekomendasi</span><svg viewBox="0 0 48 40"><rect x="12" y="10" width="22" height="26"/><path d="M12 10l5-6h22l-5 6M34 10l5-6v26l-5 6"/></svg><h3>Tuck In Box</h3><p>Folding carton dengan tutup selip. Ringan, ringkas, dan paling efisien untuk produk satuan.</p><dl><dt>Cocok untuk</dt><dd>Skincare, kosmetik, suplemen</dd><dt>Saran finishing</dt><dd>Hot foil + matte lamination</dd></dl></article>
+      <article class="bx tilt is-pick"><span class="pick">Rekomendasi</span><svg viewBox="0 0 48 40"><rect x="6" y="16" width="36" height="20"/><path d="M3 16v-6h42v6"/></svg><h3>Top Bottom Box</h3><p>Rigid box dengan tutup dan alas terpisah. Kokoh dan memberi kesan mewah saat diangkat.</p><dl><dt>Cocok untuk</dt><dd>Hampers, fashion, edisi spesial</dd><dt>Saran finishing</dt><dd>Fancy paper + emboss</dd></dl></article>
+      <article class="bx tilt is-pick"><span class="pick">Rekomendasi</span><svg viewBox="0 0 48 40"><rect x="4" y="13" width="30" height="20"/><rect x="14" y="9" width="30" height="20"/></svg><h3>Slide Box</h3><p>Laci geser di dalam sleeve. Menghadirkan momen unboxing yang berkesan.</p><dl><dt>Cocok untuk</dt><dd>Parfum, aksesori, PR package</dd><dt>Saran finishing</dt><dd>Hot foil + spot UV</dd></dl></article>
+      <article class="bx tilt is-pick"><span class="pick">Rekomendasi</span><svg viewBox="0 0 48 40"><path d="M5 18h38v18H5zM5 18l5-12h28l5 12"/></svg><h3>Mailer Box</h3><p>Box lipat yang kuat untuk pengiriman, tetap tampil rapi saat dibuka pelanggan.</p><dl><dt>Cocok untuk</dt><dd>Paket e-commerce, subscription box</dd><dt>Saran pelengkap</dt><dd>Plakban logo + sticker seal</dd></dl></article>
+      <article class="bx tilt"><svg viewBox="0 0 48 40"><rect x="7" y="6" width="34" height="30"/><rect x="14" y="12" width="20" height="13" rx="1"/></svg><h3>Window Box</h3><p>Jendela transparan agar produk terlihat tanpa harus membuka kemasan.</p><dl><dt>Cocok untuk</dt><dd>Bakery, sabun, mainan</dd><dt>Saran finishing</dt><dd>Glossy lamination</dd></dl></article>
+      <article class="bx tilt"><svg viewBox="0 0 48 40"><rect x="7" y="15" width="34" height="21"/><path d="M18 15V7h12v8"/></svg><h3>Carrier Box</h3><p>Box berpegangan yang mudah dibawa tanpa tas tambahan.</p><dl><dt>Cocok untuk</dt><dd>Kue, minuman, goodie bag</dd><dt>Saran finishing</dt><dd>Matte lamination</dd></dl></article>
+      <article class="bx tilt"><svg viewBox="0 0 48 40"><rect x="5" y="11" width="38" height="20"/><path d="M18 9v24M30 9v24" stroke-dasharray="2 2"/></svg><h3>Sleeve Paper</h3><p>Lapisan pembungkus di luar box polos. Cara hemat untuk branding musiman.</p><dl><dt>Cocok untuk</dt><dd>Lunch box, edisi promo</dd><dt>Saran material</dt><dd>Art paper</dd></dl></article>
+      <article class="bx tilt"><svg viewBox="0 0 48 40"><path d="M11 12h26l3 24H8z"/><path d="M18 12c0-8 12-8 12 0"/></svg><h3>Paper Bag</h3><p>Tas kertas bermerek untuk melengkapi pembelian di toko atau event.</p><dl><dt>Cocok untuk</dt><dd>Retail store, event</dd><dt>Saran finishing</dt><dd>Hot foil logo</dd></dl></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="band custom" id="custom">
+  <div class="wrap custom-grid">
+    <div class="custom-copy">
+      <span class="eyebrow">Custom design</span>
+      <h2>Gift box, tumbler, dan merchandise <em>bermerek</em>.</h2>
+      <p class="lead">Untuk corporate gift, hampers hari raya, event, dan souvenir. Kami bantu merancang isi dan kemasannya dalam satu paket yang serasi.</p>
+      <ul class="cgrid">
+        <li><svg viewBox="0 0 48 40"><rect x="6" y="18" width="36" height="18"/><path d="M3 18v-6h42v6M24 12v24"/><path d="M24 12c-5-8-13-5-8 0M24 12c5-8 13-5 8 0"/></svg><b>Custom Gift Box</b><span>Rigid box dengan insert pas mengikuti isi</span></li>
+        <li><svg viewBox="0 0 48 40"><rect x="18" y="4" width="12" height="5" rx="1"/><path d="M17 9h14l-1 28H18z"/><path d="M17.5 18h13"/></svg><b>Tumbler</b><span>Logo atau nama, dikemas dalam box custom</span></li>
+        <li><svg viewBox="0 0 48 40"><path d="M10 10h22v22a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4z"/><path d="M32 15h4a4 4 0 0 1 0 8h-4"/></svg><b>Mug</b><span>Souvenir kantor dan event</span></li>
+        <li><svg viewBox="0 0 48 40"><path d="M10 14h28l-2 22H12z"/><path d="M18 14c0-9 12-9 12 0"/></svg><b>Tote Bag</b><span>Goodie bag seminar dan event</span></li>
+        <li><svg viewBox="0 0 48 40"><rect x="12" y="4" width="24" height="32" rx="2"/><path d="M16 4v32M20 12h12"/></svg><b>Notebook &amp; Agenda</b><span>Sampul custom untuk kebutuhan kantor</span></li>
+        <li><svg viewBox="0 0 48 40"><rect x="4" y="16" width="40" height="20"/><path d="M4 16l6-8h28l6 8"/><circle cx="24" cy="26" r="4"/></svg><b>Corporate Hampers</b><span>Gift box, merchandise, dan kartu ucapan</span></li>
+      </ul>
+      <a class="btn btn-gold" href="#kontak" style="margin-top:30px">Diskusikan paket hampers</a>
+    </div>
+    <div class="scene custom-stage" id="customStage" aria-label="Ilustrasi 3D gift box berisi tumbler. Geser untuk memutar.">
+      <div class="shadow"></div>
+      <div class="rig" id="customRig">
+        <div class="cub giftbox" style="--w:270px;--h:84px;--d:200px;transform:translate3d(0,70px,0)">
+          <div class="fc ft"><span class="rib"></span><span class="gtag">DJI</span></div><div class="fc bk"><span class="rib"></span></div><div class="fc rt"></div><div class="fc lf"></div>
+          <div class="fc tp foam"></div><div class="fc bt"></div>
+        </div>
+        <div id="tumbler" style="position:absolute;left:0;top:0;transform-style:preserve-3d;transform:translate3d(-48px,-48px,0)"></div>
+        <div class="cub tcard" style="--w:104px;--h:132px;--d:4px;transform:translate3d(72px,-30px,10px) rotateY(-12deg)">
+          <div class="fc ft"><span>Thank you</span><small>DJI</small></div><div class="fc bk"></div><div class="fc rt"></div><div class="fc lf"></div><div class="fc tp"></div><div class="fc bt"></div>
+        </div>
+      </div>
+      <span class="hint">Geser untuk memutar</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="band seal" id="seal">
+  <div class="wrap seal-grid">
+    <div>
+      <span class="eyebrow">Plakban &amp; Sticker Seal</span>
+      <h2 style="margin-top:16px">Sentuhan terakhir yang <em>mengunci</em> kesan.</h2>
+      <div class="tabs" role="tablist" aria-label="Pilih aksesori">
+        <button role="tab" id="tab-tape" aria-selected="true" aria-controls="p-tape" data-mode="tape">Plakban</button>
+        <button role="tab" id="tab-seal" aria-selected="false" aria-controls="p-seal" data-mode="seal">Sticker Seal</button>
+      </div>
+      <div class="panel" id="p-tape" role="tabpanel" aria-labelledby="tab-tape">
+        <h3>Plakban bermerek</h3>
+        <p>Setiap paket yang dikirim ikut mempromosikan brand Anda. Plakban dengan logo membuat paket mudah dikenali sejak di depan pintu pelanggan.</p>
+        <div class="opts">
+          <div class="opt"><span class="sw plain"></span><b>Plain</b><small>Polos, rapi untuk kebutuhan harian.</small></div>
+          <div class="opt"><span class="sw logo"></span><b>Printed logo</b><small>Logo brand dicetak berulang.</small></div>
+          <div class="opt"><span class="sw custom"></span><b>Custom</b><small>Warna dan desain sesuai brand.</small></div>
+        </div>
+        <ul class="ticks"><li>Cocok dipadukan dengan mailer box dan karton pengiriman</li><li>Menambah kesan profesional pada paket online</li></ul>
+      </div>
+      <div class="panel" id="p-seal" role="tabpanel" aria-labelledby="tab-seal" hidden>
+        <h3>Sticker seal</h3>
+        <p>Segel kecil di bibir tutup box yang menandakan kemasan masih utuh saat diterima, sekaligus menjadi detail mewah yang sering difoto saat unboxing.</p>
+        <div class="opts">
+          <div class="opt"><span class="sw round"></span><b>Round</b><small>Bulat klasik untuk segel tutup.</small></div>
+          <div class="opt"><span class="sw square"></span><b>Square</b><small>Persegi untuk label dan segel.</small></div>
+          <div class="opt"><span class="sw cut"></span><b>Cutting</b><small>Mengikuti bentuk logo Anda.</small></div>
+        </div>
+        <ul class="ticks"><li>Bisa dipadukan dengan finishing foil emas atau perak</li><li>Juga untuk label produk dan ucapan terima kasih</li></ul>
+      </div>
+      <div class="seal-need"><span class="eyebrow">Untuk pesan custom, siapkan</span><div><span>File logo</span><span>Warna brand</span><span>Bentuk &amp; ukuran</span><span>Jumlah</span><span>Tenggat waktu</span></div></div>
+    </div>
+    <div class="scene seal-stage" id="sealStage" data-mode="tape" aria-label="Ilustrasi 3D mailer box dengan plakban atau sticker seal. Geser untuk memutar.">
+      <div class="shadow"></div>
+      <div class="rig" id="sealRig">
+        <div class="cub mailer" style="--w:300px;--h:110px;--d:220px">
+          <div class="fc ft"><span class="tape-front"></span><span class="seal-dot on-front"><span>DJI</span></span></div>
+          <div class="fc bk"><span class="tape-front"></span></div>
+          <div class="fc rt"></div><div class="fc lf"></div>
+          <div class="fc tp"><span class="tape-top"></span><span class="seal-dot on-top"><span>DJI</span></span></div>
+          <div class="fc bt"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="finishing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Material &amp; finishing</span>
+      <h2>Rasakan <em>perbedaannya</em>.</h2>
+      <p class="lead">Pilih teknik finishing untuk melihat efeknya pada tutup box.</p>
+    </div>
+    <div class="studio">
+      <div>
+        <div class="fin-list" role="group" aria-label="Pilih finishing">
+          <button class="fin-btn" type="button" data-f="foil" aria-pressed="true"><b>Hot Stamping Foil</b><small>Kilau metalik</small></button>
+          <button class="fin-btn" type="button" data-f="emboss" aria-pressed="false"><b>Emboss</b><small>Logo timbul</small></button>
+          <button class="fin-btn" type="button" data-f="deboss" aria-pressed="false"><b>Deboss</b><small>Logo tenggelam</small></button>
+          <button class="fin-btn" type="button" data-f="spotuv" aria-pressed="false"><b>Spot UV</b><small>Kilap selektif</small></button>
+          <button class="fin-btn" type="button" data-f="glossy" aria-pressed="false"><b>Glossy Lamination</b><small>Warna lebih hidup</small></button>
+          <button class="fin-btn" type="button" data-f="matte" aria-pressed="false"><b>Matte Lamination</b><small>Doff dan lembut</small></button>
+        </div>
+        <p class="fin-note" id="finNote" aria-live="polite"><b>Hot Stamping Foil.</b> Favorit brand skincare premium untuk logo dan nama produk, sangat kontras di atas kertas gelap.</p>
+      </div>
+      <div class="scene fin-stage" id="finStage" aria-label="Ilustrasi 3D tutup box dengan finishing terpilih">
+        <div class="shadow"></div>
+        <div class="rig" id="finRig">
+          <div class="cub navy" style="--w:230px;--h:64px;--d:230px">
+            <div class="fc ft"></div><div class="fc bk"></div><div class="fc rt"></div><div class="fc lf"></div>
+            <div class="fc tp fin-top" id="finTop" data-f="foil"><span class="mark">DJI</span></div>
+            <div class="fc bt"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mats-title">Sepuluh pilihan material</p>
+    <div class="mats">
+      <div class="mat"><span class="chip" style="background:linear-gradient(160deg,#fff,#ebe8e1)"></span><div><b>Art Carton</b><small>Cetak warna tajam</small></div></div>
+      <div class="mat"><span class="chip" style="background:linear-gradient(160deg,#f8f2e3,#e8dfc8)"></span><div><b>Ivory</b><small>Putih halus dan kaku</small></div></div>
+      <div class="mat"><span class="chip" style="background:linear-gradient(90deg,#f4f2ec 0 58%,#a09f9a 58%)"></span><div><b>Greyback Duplex</b><small>Ekonomis</small></div></div>
+      <div class="mat"><span class="chip" style="background:linear-gradient(160deg,#fcfcf9,#e3e2dc)"></span><div><b>Art Paper</b><small>Sleeve dan label</small></div></div>
+      <div class="mat"><span class="chip" style="background:repeating-linear-gradient(45deg,#ece5d1 0 5px,#f3edde 5px 10px)"></span><div><b>Greaseproof</b><small>Tahan minyak</small></div></div>
+      <div class="mat"><span class="chip" style="background:repeating-linear-gradient(100deg,#bc8d59 0 2px,#b48452 2px 5px)"></span><div><b>Kraft Paper</b><small>Tampilan natural</small></div></div>
+      <div class="mat"><span class="chip" style="background:linear-gradient(160deg,#f2f0ea,#dcd9d1)"></span><div><b>White Board</b><small>Board putih tebal</small></div></div>
+      <div class="mat"><span class="chip" style="background:linear-gradient(160deg,#8e6d4a,#715438)"></span><div><b>Brown Board</b><small>Board cokelat kuat</small></div></div>
+      <div class="mat"><span class="chip" style="background:linear-gradient(160deg,#94928d,#706f6a)"></span><div><b>Grey Board</b><small>Inti rigid box</small></div></div>
+      <div class="mat"><span class="chip" style="background:repeating-linear-gradient(0deg,#2c3a6c 0 1px,#26326a 1px 3px)"></span><div><b>Fancy Paper</b><small>Tekstur premium</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="proses">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Alur kerja</span>
+      <h2>Dari ide sampai <em>siap kirim</em>.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Konsultasi</h3><p>Ceritakan produk, jumlah, dan anggaran Anda.</p></div>
+      <div class="step"><span class="n">2</span><h3>Rekomendasi</h3><p>Kami usulkan model box, material, dan finishing.</p></div>
+      <div class="step"><span class="n">3</span><h3>Desain</h3><p>Bantuan desain dan dieline kemasan.</p></div>
+      <div class="step"><span class="n">4</span><h3>Produksi</h3><p>Cetak dan finishing di workshop sendiri.</p></div>
+      <div class="step"><span class="n">5</span><h3>Siap kirim</h3><p>Diperiksa, dikemas, dan dikirim ke Anda.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band profile" id="profile">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Profile</span>
+      <h2>Mengenal <em>PT Dendigma Jaya Indonesia</em>.</h2>
+    </div>
+
+    <div class="about">
+      <div class="about-text">
+        <h3>Your packaging &amp; branding solution</h3>
+        <p>Kami adalah produsen kemasan berbasis kertas untuk produk food dan non-food, dengan fokus pada kemasan yang membuat brand tampil lebih rapi dan mudah diingat. Setiap proyek dimulai dari kebutuhan produk Anda, lalu kami rekomendasikan struktur box, material, dan finishing yang paling sesuai.</p>
+        <p>Produksi kami tangani sendiri di workshop Kelapa Gading, Jakarta Utara, bukan sebagai reseller. Dengan begitu kualitas terjaga sejak desain hingga kemasan siap dikirim, dengan harga yang tetap bersahabat.</p>
+        <ul class="values">
+          <li><b>Kualitas premium</b>Tampil rapi dan berkelas</li>
+          <li><b>Produksi langsung</b>Dikerjakan sendiri, bukan reseller</li>
+          <li><b>Dukungan desain</b>Dibantu sejak konsep awal</li>
+          <li><b>Konsultasi</b>Berangkat dari kebutuhan Anda</li>
+          <li><b>Harga bersahabat</b>Seimbang antara tampilan dan anggaran</li>
+          <li><b>Kertas daur ulang</b>Tersedia untuk kebutuhan tertentu</li>
+        </ul>
+      </div>
+      <aside class="dl-card">
+        <div class="dl-stage" aria-hidden="false">
+          <div class="dl-book">
+            <img class="pg2" src="img/i04.jpg" alt="">
+            <span class="pg-edge"></span>
+            <img class="pg1" src="img/i05.jpg" alt="Sampul company profile PT Dendigma Jaya Indonesia">
+            <span class="spine"></span><span class="gloss"></span>
+          </div>
+          <span class="dl-shadow"></span>
+        </div>
+        <div class="dl-meta">
+          <span class="eyebrow">Unduh dokumen</span>
+          <h4>Company Profile</h4>
+          <p>PDF · A4 · 12 halaman · 1974 KB</p>
+          <p class="dl-list">Profil, visi misi, keunggulan, box packaging, custom design, finishing, portofolio, alur kerja, dan struktur organisasi.</p>
+          <a class="btn btn-dark" id="dlBtn" href="company-profile.pdf" download="Company Profile - PT Dendigma Jaya Indonesia.pdf">Download PDF</a>
+          <a class="btn btn-line" id="dlOpen" href="company-profile.pdf" target="_blank" rel="noopener" hidden>Buka PDF</a>
+          <p class="dl-status" id="dlStatus" aria-live="polite"></p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="sub-head" id="portofolio">
+      <h3>Portofolio</h3>
+      <div class="filters" role="group" aria-label="Saring portofolio">
+        <button type="button" data-cat="all" aria-pressed="true">Semua</button>
+        <button type="button" data-cat="beauty" aria-pressed="false">Skincare &amp; Beauty</button>
+        <button type="button" data-cat="gift" aria-pressed="false">Gifting</button>
+        <button type="button" data-cat="food" aria-pressed="false">Food</button>
+        <button type="button" data-cat="seal" aria-pressed="false">Plakban &amp; Seal</button>
+        <button type="button" data-cat="custom" aria-pressed="false">Tumbler &amp; Custom</button>
+      </div>
+    </div>
+    <div class="gallery" id="gallery">
+      <figure class="shot big tilt" data-cat="beauty"><img src="img/i06.jpg" alt="Box serum navy DJI berisi botol dropper"><figcaption>Serum set DJI<span>Beauty</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="beauty"><img src="img/i07.jpg" alt="Box toner putih DJI dengan botol pump"><figcaption>Box toner DJI<span>Beauty</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="beauty"><img src="img/i08.jpg" alt="Rigid box navy DJI berlaci"><figcaption>Rigid box berlaci DJI<span>Beauty</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="beauty"><img src="img/i09.jpg" alt="Box krim merah muda DJI dengan jar"><figcaption>Box krim DJI<span>Beauty</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="gift"><img src="img/i10.jpg" alt="Dua gift box DJI berpita"><figcaption>Gift set DJI<span>Gifting</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="gift"><img src="img/i11.jpg" alt="Box berbentuk buku DJI motif floral"><figcaption>Box buku DJI<span>Gifting</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="gift"><img src="img/i12.jpg" alt="Box souvenir floral DJI"><figcaption>Souvenir floral DJI<span>Gifting</span></figcaption></figure>
+      <figure class="shot wide tilt" data-cat="food"><img src="img/i13.jpg" alt="Box cookies biru DJI dengan pita hijau"><figcaption>Hampers cookies DJI<span>Food</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="gift"><img src="img/i14.jpg" alt="Top bottom box ungu DJI"><figcaption>Top bottom box DJI<span>Gifting</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="food"><img src="img/i15.jpg" alt="Hampers oranye DJI berkompartemen"><figcaption>Hampers oranye DJI<span>Food</span></figcaption></figure>
+      <figure class="shot wide tilt" data-cat="food"><img src="img/i16.jpg" alt="Hampers kue kering navy DJI"><figcaption>Hampers kue kering DJI<span>Food</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="seal"><img src="img/i17.jpg" alt="Mailer box dengan plakban kraft bertuliskan DJI"><figcaption>Plakban printed logo<span>Plakban</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="seal"><img src="img/i18.jpg" alt="Sticker seal emas DJI di tutup box navy"><figcaption>Sticker seal foil emas<span>Seal</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="custom"><img src="img/i19.jpg" alt="Tumbler champagne DJI dengan box navy"><figcaption>Tumbler custom DJI<span>Custom</span></figcaption></figure>
+      <figure class="shot tilt" data-cat="custom"><img src="img/i20.jpg" alt="Gift set dua tumbler DJI dalam box navy"><figcaption>Gift set tumbler DJI<span>Custom</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="band contact" id="kontak">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Kontak</span>
+      <h2>Mari ciptakan kemasan <em class="foil">ikonik</em> untuk brand Anda.</h2>
+      <p class="lead">Kirimkan detail produk Anda, dan kami siapkan rekomendasi box beserta penawarannya.</p>
+      <div class="info">
+        <div><span class="label">Office &amp; Workshop</span><address>Jln. Gading Kirana Timur A-11/15, RT 001/008<br>Kel./Kec. Kelapa Gading, Jakarta Utara 14240</address></div>
+        <div><span class="label">Telepon &amp; WhatsApp</span><div class="phone-row"><a class="wa-num" href="https://wa.me/6282111900788" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z"/></svg><span id="phone">+62 821 1190 0788</span></a><button class="copy" type="button" id="copyBtn">Salin nomor</button></div></div>
+      </div>
+    </div>
+    <form id="inq" novalidate>
+      <h3>Permintaan penawaran</h3>
+      <p class="hint">Pesan akan disusun otomatis dan dikirim lewat WhatsApp.</p>
+      <div class="row">
+        <div class="field"><label for="f-name">Nama</label><input id="f-name" autocomplete="name" placeholder="Nama Anda"></div>
+        <div class="field"><label for="f-brand">Brand</label><input id="f-brand" placeholder="Nama brand"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="f-prod">Jenis box</label><select id="f-prod"><option>Belum tahu, butuh rekomendasi</option><option>Tuck In Box</option><option>Top Bottom Box</option><option>Slide Box</option><option>Mailer Box</option><option>Window Box</option><option>Carrier Box</option><option>Sleeve Paper</option><option>Paper Bag</option></select></div>
+        <div class="field"><label for="f-qty">Perkiraan jumlah</label><input id="f-qty" inputmode="numeric" placeholder="mis. 1.000 pcs"></div>
+      </div>
+      <fieldset class="checks">
+        <legend>Tambahan</legend>
+        <label><input type="checkbox" id="c-tape" value="Plakban bermerek"> Plakban bermerek</label>
+        <label><input type="checkbox" id="c-seal" value="Sticker seal"> Sticker seal</label>
+        <label><input type="checkbox" id="c-card" value="Thank you card / hang tag"> Thank you card / hang tag</label>
+      </fieldset>
+      <div class="field"><label for="f-msg">Catatan</label><textarea id="f-msg" placeholder="Ukuran produk, finishing yang diinginkan, tenggat waktu..."></textarea></div>
+      <a class="btn btn-gold" id="waLink" href="https://wa.me/6282111900788" target="_blank" rel="noopener">Kirim via WhatsApp</a>
+      <p class="fine">Tombol ini membuka WhatsApp dengan pesan yang sudah terisi.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/i03.png" alt="Logo DJ"><span>PT Dendigma Jaya Indonesia<small>Your packaging &amp; branding solution</small></span></a>
+    <p>© 2026 PT Dendigma Jaya Indonesia · Kelapa Gading, Jakarta Utara</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* drag-to-rotate rigs with gentle auto spin */
+  function spinner(stage,rig,start,speed,cb){
+    var ry=start,drag=false,lastX=0,idle=0;
+    function set(){rig.style.setProperty('--ry',ry+'deg');if(cb)cb(ry)}
+    stage.addEventListener('pointerdown',function(e){drag=true;lastX=e.clientX;stage.setPointerCapture(e.pointerId)});
+    stage.addEventListener('pointermove',function(e){if(!drag)return;ry+=(e.clientX-lastX)*.5;lastX=e.clientX;idle=performance.now();set()});
+    ['pointerup','pointercancel'].forEach(function(t){stage.addEventListener(t,function(){drag=false;idle=performance.now()})});
+    function tick(now){if(!drag&&!reduce&&now-idle>1800){ry+=speed;set()}requestAnimationFrame(tick)}
+    set();requestAnimationFrame(tick);
+  }
+  spinner(document.getElementById('heroStage'),document.getElementById('heroRig'),-32,.12);
+  /* tumbler cylinder with live shading */
+  var tum=document.getElementById('tumbler'),TF=[],N=28,R=36,H=176;
+  (function(){
+    var w=2*Math.PI*R/N+0.6;
+    for(var i=0;i<N;i++){var f=document.createElement('div');f.className='tface';f.style.width=w+'px';f.style.height=H+'px';var a=i*360/N;f.style.transform='translate(-50%,-50%) rotateY('+a+'deg) translateZ('+R+'px)';tum.appendChild(f);TF.push({el:f,a:a})}
+    var cap=document.createElement('div');cap.className='tcap';cap.style.width=cap.style.height=(2*R+1)+'px';cap.style.transform='translate(-50%,-50%) rotateX(90deg) translateZ('+(H/2)+'px)';tum.appendChild(cap);
+  })();
+  function shadeTumbler(ry){
+    for(var i=0;i<TF.length;i++){var ang=(TF[i].a+ry+40)*Math.PI/180,k=Math.cos(ang);var L=Math.round(44+30*Math.max(-.35,k)),Ls=Math.round(L*.42);
+      TF[i].el.style.background='linear-gradient(180deg,hsl(30 12% '+Math.round(L*.35)+'%) 0 13%,hsl(38 10% '+Math.round(L*.6)+'%) 13% 14%,hsl(38 42% '+L+'%) 14% 58%,hsl(228 40% '+Ls+'%) 58% 63%,hsl(38 42% '+L+'%) 63% 100%)'}
+  }
+  spinner(document.getElementById('sealStage'),document.getElementById('sealRig'),-38,.1);
+  spinner(document.getElementById('customStage'),document.getElementById('customRig'),-30,.14,shadeTumbler);
+
+  /* finishing stage tilts with pointer */
+  var fs=document.getElementById('finStage'),fr=document.getElementById('finRig');
+  fs.addEventListener('pointermove',function(e){var r=fs.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;fr.style.setProperty('--ry',(-28+x*40)+'deg');fr.style.setProperty('--rx',(-38-y*24)+'deg')});
+  fs.addEventListener('pointerleave',function(){fr.style.setProperty('--ry','-28deg');fr.style.setProperty('--rx','-38deg')});
+
+  var notes={
+    foil:'<b>Hot Stamping Foil.</b> Favorit brand skincare premium untuk logo dan nama produk, sangat kontras di atas kertas gelap.',
+    emboss:'<b>Emboss.</b> Logo dibuat timbul sehingga terasa saat diraba. Cantik dipadukan dengan foil.',
+    deboss:'<b>Deboss.</b> Logo ditekan masuk ke permukaan. Elegan dan tidak mencolok.',
+    spotuv:'<b>Spot UV Varnish.</b> Kilap hanya pada logo, kontras dengan permukaan doff di sekitarnya.',
+    glossy:'<b>Glossy Lamination.</b> Permukaan mengkilap yang membuat warna cetak lebih cerah dan tahan gores.',
+    matte:'<b>Matte Lamination.</b> Hasil doff yang lembut di tangan, memberi kesan bersih dan modern.'
+  };
+  var ft=document.getElementById('finTop'),note=document.getElementById('finNote');
+  document.querySelectorAll('.fin-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.fin-btn').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');
+      ft.dataset.f='';void ft.offsetWidth;ft.dataset.f=b.dataset.f;note.innerHTML=notes[b.dataset.f];
+    });
+  });
+
+  /* tape / seal tabs */
+  var ss=document.getElementById('sealStage');
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false');document.getElementById(x.getAttribute('aria-controls')).hidden=x!==b});
+      ss.dataset.mode=b.dataset.mode;
+    });
+  });
+
+  /* 3D tilt cards */
+  if(!reduce&&matchMedia('(hover:hover)').matches){
+    document.querySelectorAll('.tilt').forEach(function(el){
+      el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform='perspective(900px) rotateY('+(x*10)+'deg) rotateX('+(-y*10)+'deg) translateY(-4px)'});
+      el.addEventListener('pointerleave',function(){el.style.transform=''});
+    });
+  }
+
+  /* portfolio filter */
+  var shots=document.querySelectorAll('#gallery .shot');
+  document.querySelectorAll('.filters button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');
+      shots.forEach(function(s){s.hidden=!(b.dataset.cat==='all'||s.dataset.cat===b.dataset.cat)});
+    });
+  });
+
+  document.getElementById('dlOpen').hidden=false;
+  var toast=document.getElementById('toast'),tt;
+  function show(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2200)}
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);show('Nomor dipilih, tekan salin')}
+    try{navigator.clipboard.writeText('+6282111900788').then(function(){show('Nomor disalin')},sel)}catch(e){sel()}
+  });
+
+  var form=document.getElementById('inq'),wa=document.getElementById('waLink');
+  function v(id){return document.getElementById(id).value.trim()}
+  function build(){
+    var L=['Halo PT Dendigma Jaya Indonesia, saya ingin meminta penawaran kemasan.',''];
+    if(v('f-name'))L.push('Nama: '+v('f-name'));
+    if(v('f-brand'))L.push('Brand: '+v('f-brand'));
+    L.push('Jenis box: '+v('f-prod'));
+    if(v('f-qty'))L.push('Jumlah: '+v('f-qty'));
+    var extra=[].slice.call(form.querySelectorAll('.checks input:checked')).map(function(c){return c.value});
+    if(extra.length)L.push('Tambahan: '+extra.join(', '));
+    if(v('f-msg'))L.push('Catatan: '+v('f-msg'));
+    wa.href='https://wa.me/6282111900788?text='+encodeURIComponent(L.join('\n'));
+  }
+  form.addEventListener('input',build);form.addEventListener('change',build);
+  form.addEventListener('submit',function(e){e.preventDefault()});
+  build();
+})();
+</script>
+
+</body></html>
